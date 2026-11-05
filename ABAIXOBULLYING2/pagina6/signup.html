@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar conta — Basta! Contra o Bullying</title>
+<link rel="stylesheet" href="signup.css">
+<link rel="icon" type="image/jpg" href="../photos.png">
+</head>
+<body>
+
+  <div class="signup-card">
+    <div class="signup-brand">
+      <div class="mark">B!</div>
+      <div class="title">Basta! Contra o Bullying</div>
+    </div>
+
+    <div id="formIntro">
+      <h1 class="signup-heading">Crie sua conta</h1>
+      <p class="signup-sub">É gratuito e leva menos de um minuto.</p>
+    </div>
+
+    <form id="signupForm" novalidate>
+      <div class="field">
+        <label class="label" for="nome">Nome</label>
+        <div class="input-wrap">
+          <span class="input-icon">👤</span>
+          <input type="text" id="nome" placeholder="Como podemos te chamar?" autocomplete="name">
+        </div>
+        <div class="error-msg">Informe seu nome.</div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">E-mail</label>
+        <div class="input-wrap">
+          <span class="input-icon">✉️</span>
+          <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="email">
+        </div>
+        <div class="error-msg">Informe um e-mail válido.</div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="senha">Senha <span class="hint">(mínimo de 8 caracteres)</span></label>
+        <div class="input-wrap">
+          <span class="input-icon">🔒</span>
+          <input type="password" id="senha" placeholder="••••••••" autocomplete="new-password">
+          <button type="button" class="toggle-pass" data-target="senha" aria-pressed="false">Mostrar</button>
+        </div>
+        <div class="strength" id="strength" data-level="0">
+          <div class="strength-bar"><div class="strength-fill"></div></div>
+          <div class="strength-text" id="strengthText">Use pelo menos 8 caracteres</div>
+        </div>
+        <div class="error-msg">A senha precisa ter pelo menos 8 caracteres.</div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="confirmar">Confirmar senha</label>
+        <div class="input-wrap">
+          <span class="input-icon">🔒</span>
+          <input type="password" id="confirmar" placeholder="Repita a senha" autocomplete="new-password">
+          <button type="button" class="toggle-pass" data-target="confirmar" aria-pressed="false">Mostrar</button>
+        </div>
+        <div class="error-msg">As senhas não são iguais.</div>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent">
+        <span>Li e concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</span>
+      </label>
+      <div class="error-msg consent-error" id="consentError">Marque esta opção para criar sua conta.</div>
+
+      <button type="submit" class="glossy-btn">Criar conta</button>
+    </form>
+
+    <!-- Success state -->
+    <div class="success" id="successBox" role="status" aria-live="polite">
+      <div class="check">✓</div>
+      <h2>Conta criada, <span id="welcomeName"></span>!</h2>
+      <p>Bem-vindo ao movimento. Agora você já pode entrar com seu e-mail e senha.</p>
+      <a href="../pagina2/login.html" class="glossy-btn">Ir para o login</a>
+    </div>
+
+    <div id="formFooter">
+      <div class="divider">ou</div>
+      <p class="login-line">Já tem uma conta? <a href="../pagina2/login.html">Entrar</a></p>
+      <a href="../pagina1/index.html" class="back-home">← Voltar para o início</a>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>

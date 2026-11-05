@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Denunciar um caso — Basta! Contra o Bullying</title>
+<link rel="stylesheet" href="form.css">
+<link rel="icon" type="image/jpg" href="../photos.png"
+
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="../pagina1/Index.html" class="brand">
+        <div class="mark">B!</div>
+        <div class="brand-text">
+          <div class="title">Basta! Contra o Bullying</div>
+          <div class="subtitle">Movimento de conscientização e apoio</div>
+        </div>
+      </a>
+      <a href="../pagina2/login.html" class="glossy-btn">Entrar</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul style="display:flex; flex-wrap:wrap;">
+        <li><a href="../pagina1/Index.html">Início</a></li>
+        <li><a href="../pagina5/what.html">O que é bullying</a></li>
+        <li><a href="form.html" class="active">Denunciar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-heading">
+        <div class="eyebrow"><span class="dot"></span> Seguro e confidencial</div>
+        <h1 class="page-title">Denunciar um caso de bullying</h1>
+        <p>Conte o que aconteceu com o máximo de detalhes que se sentir confortável em compartilhar. Você pode denunciar de forma anônima.</p>
+      </div>
+
+      <div class="layout">
+
+        <div>
+          <!-- FORM -->
+          <form class="report-form glass-panel" id="reportForm" novalidate>
+
+            <fieldset>
+              <legend><span class="step">1</span> Quem está denunciando?</legend>
+
+              <div class="field" id="f-role">
+                <span class="group-label">Eu sou…</span>
+                <div class="options" role="radiogroup">
+                  <label class="option"><input type="radio" name="role" value="vitima"><span>A pessoa que sofreu</span></label>
+                  <label class="option"><input type="radio" name="role" value="testemunha"><span>Testemunha</span></label>
+                  <label class="option"><input type="radio" name="role" value="responsavel"><span>Pai, mãe ou responsável</span></label>
+                  <label class="option"><input type="radio" name="role" value="educador"><span>Professor(a) / educador(a)</span></label>
+                </div>
+                <div class="error-msg">Escolha uma opção.</div>
+              </div>
+
+              <label class="anon-box">
+                <input type="checkbox" id="anonymous">
+                <div>
+                  <strong>Quero denunciar de forma anônima</strong>
+                  <span>Não pediremos nenhum dado de contato. Você não receberá retorno, mas poderá guardar o número de protocolo.</span>
+                </div>
+              </label>
+
+              <div id="contactFields">
+                <div class="two-col">
+                  <div class="field">
+                    <label for="nome">Seu nome <span class="hint">(opcional)</span></label>
+                    <div class="input-wrap"><input type="text" id="nome" autocomplete="name"></div>
+                  </div>
+                  <div class="field" id="f-contato">
+                    <label for="contato">E-mail ou telefone <span class="hint">(para retorno)</span></label>
+                    <div class="input-wrap"><input type="text" id="contato" autocomplete="email"></div>
+                    <div class="error-msg">Informe um contato ou marque a opção anônima.</div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="step">2</span> O que aconteceu?</legend>
+
+              <div class="field" id="f-tipo">
+                <span class="group-label">Tipo de bullying <span class="hint">(marque quantos quiser)</span></span>
+                <div class="options">
+                  <label class="option"><input type="checkbox" name="tipo" value="verbal"><span>Verbal</span></label>
+                  <label class="option"><input type="checkbox" name="tipo" value="social"><span>Social / exclusão</span></label>
+                  <label class="option"><input type="checkbox" name="tipo" value="fisico"><span>Físico</span></label>
+                  <label class="option"><input type="checkbox" name="tipo" value="cyber"><span>Cyberbullying</span></label>
+                  <label class="option"><input type="checkbox" name="tipo" value="outro"><span>Outro / não sei</span></label>
+                </div>
+                <div class="error-msg">Marque pelo menos um tipo.</div>
+              </div>
+
+              <div class="two-col">
+                <div class="field">
+                  <label for="local">Onde aconteceu?</label>
+                  <div class="input-wrap">
+                    <select id="local">
+                      <option value="">Selecione…</option>
+                      <option>Na escola / faculdade</option>
+                      <option>No trabalho</option>
+                      <option>Online / redes sociais</option>
+                      <option>No trajeto (ônibus, rua)</option>
+                      <option>Em outro lugar</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="data">Quando aconteceu? <span class="hint">(aproximado)</span></label>
+                  <div class="input-wrap"><input type="date" id="data"></div>
+                </div>
+              </div>
+
+              <div class="field" id="f-freq">
+                <span class="group-label">Com que frequência?</span>
+                <div class="options" role="radiogroup">
+                  <label class="option"><input type="radio" name="freq" value="uma"><span>Uma vez</span></label>
+                  <label class="option"><input type="radio" name="freq" value="algumas"><span>Algumas vezes</span></label>
+                  <label class="option"><input type="radio" name="freq" value="sempre"><span>Acontece sempre</span></label>
+                </div>
+              </div>
+
+              <div class="field" id="f-desc">
+                <label for="descricao">Descreva a situação</label>
+                <div class="input-wrap" id="descWrap">
+                  <textarea id="descricao" placeholder="Conte com suas palavras o que aconteceu, como se sentiu e se alguém mais viu…"></textarea>
+                </div>
+                <div class="error-msg">Descreva brevemente o que aconteceu.</div>
+              </div>
+
+              <div class="field">
+                <label for="envolvidos">Pessoas envolvidas <span class="hint">(opcional — nomes, apelidos ou descrição)</span></label>
+                <div class="input-wrap"><input type="text" id="envolvidos"></div>
+              </div>
+            </fieldset>
+
+            <label class="consent" id="f-consent">
+              <input type="checkbox" id="consent">
+              <span>Declaro que as informações acima são verdadeiras, até onde sei, e autorizo que sejam usadas para analisar o caso e oferecer apoio.</span>
+            </label>
+            <div class="error-msg" id="consentError" style="margin:-14px 0 16px 2px;">Marque a declaração para enviar.</div>
+
+            <div class="form-actions">
+              <button type="submit" class="glossy-btn green big">Enviar denúncia</button>
+              <span class="note">🔒 Seus dados são tratados com sigilo.</span>
+            </div>
+          </form>
+
+          <!-- SUCCESS -->
+          <div class="success glass-panel" id="successBox" role="status" aria-live="polite">
+            <div class="check">✓</div>
+            <h2>Denúncia registrada</h2>
+            <p>Obrigado pela coragem de falar. Seu relato foi recebido e será analisado com cuidado e sigilo.</p>
+            <div class="protocol" id="protocolNumber">—</div>
+            <p>Guarde este número de protocolo para acompanhar o caso.</p>
+            <a href="../pagina1/Index.html" class="glossy-btn">Voltar para o início</a>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="side">
+          <div class="side-card glass-panel urgent">
+            <h3>Perigo imediato?</h3>
+            <p>Se alguém está em risco agora, não espere o formulário: ligue para a Polícia <strong>190</strong> ou para o SAMU <strong>192</strong>. Para apoio emocional, o CVV atende 24h pelo <strong>188</strong>.</p>
+          </div>
+
+          <div class="side-card glass-panel">
+            <h3>Dicas para o relato</h3>
+            <ul>
+              <li>Inclua datas, horários e locais, se lembrar.</li>
+              <li>Guarde prints, mensagens e fotos como prova.</li>
+              <li>Não precisa ter certeza de tudo — conte o que souber.</li>
+            </ul>
+          </div>
+
+          <div class="side-card glass-panel">
+            <h3>O que acontece depois?</h3>
+            <p>Nossa equipe lê o relato, avalia a gravidade e, se você deixou contato, retorna com orientações e indica canais de apoio adequados.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div>
+          <h5>Contato</h5>
+          <ul>
+            <li><a href="mailto:contato@bastabullying.org">contato@bastabullying.org</a></li>
+            <li><a href="tel:0800000000">0800 000 000</a></li>
+            <li>Segunda a sexta, 8h às 20h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Basta! Contra o Bullying — Movimento de Conscientização</span>
+      <span>© 2026 · Conteúdo educativo e de apoio</span>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('reportForm');
+    const anon = document.getElementById('anonymous');
+    const contactFields = document.getElementById('contactFields');
+    const successBox = document.getElementById('successBox');
+
+    // Hide contact fields when anonymous is checked
+    anon.addEventListener('change', () => {
+      contactFields.hidden = anon.checked;
+      if (anon.checked) document.getElementById('f-contato').classList.remove('has-error');
+    });
+
+    function setError(id, hasError){
+      document.getElementById(id).classList.toggle('has-error', hasError);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let ok = true;
+
+      const role = form.querySelector('input[name="role"]:checked');
+      setError('f-role', !role); if (!role) ok = false;
+
+      const tipos = form.querySelectorAll('input[name="tipo"]:checked');
+      setError('f-tipo', tipos.length === 0); if (tipos.length === 0) ok = false;
+
+      const desc = document.getElementById('descricao').value.trim();
+      setError('f-desc', desc.length < 10);
+      document.getElementById('descWrap').classList.toggle('invalid', desc.length < 10);
+      if (desc.length < 10) ok = false;
+
+      if (!anon.checked) {
+        const contato = document.getElementById('contato').value.trim();
+        setError('f-contato', contato === ''); if (contato === '') ok = false;
+      }
+
+      const consent = document.getElementById('consent').checked;
+      document.getElementById('consentError').style.display = consent ? 'none' : 'block';
+      if (!consent) ok = false;
+
+      if (!ok) {
+        const firstErr = document.querySelector('.has-error, #consentError[style*="block"]');
+        if (firstErr) firstErr.scrollIntoView({ behavior:'smooth', block:'center' });
+        return;
+      }
+
+      // NOTE: front-end only. Connect this to your backend/API to actually store the report.
+      const protocol = 'BST-' + new Date().getFullYear() + '-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+      document.getElementById('protocolNumber').textContent = protocol;
+      form.style.display = 'none';
+      successBox.classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Clear error styling as the user fixes things
+    form.addEventListener('input', () => {
+      document.querySelectorAll('.has-error').forEach(el => {
+        if (el.id === 'f-desc' && document.getElementById('descricao').value.trim().length >= 10) {
+          el.classList.remove('has-error');
+          document.getElementById('descWrap').classList.remove('invalid');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
